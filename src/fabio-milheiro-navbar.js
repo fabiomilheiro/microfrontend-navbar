@@ -8,7 +8,7 @@ const lifecycles = singleSpaReact({
   React,
   ReactDOM,
   rootComponent: Root,
-  domElementGetter: document.getElementsById("navbar"),
+  domElementGetter: document.getElementById("navbar"),
   errorBoundary(err, info, props) {
     // Customize the root error boundary for your microfrontend here.
     return null;
