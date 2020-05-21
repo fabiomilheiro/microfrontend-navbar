@@ -5,7 +5,6 @@ const Navbar = (props) => {
   return (
     <BrowserRouter>
       <section>
-        {props.name} is mounted!
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -13,10 +12,16 @@ const Navbar = (props) => {
           <li>
             <Link to="/products">Products</Link>
           </li>
+          <li>
+            <Link to="/products/1">Product 1</Link>
+          </li>
+          <li>
+            <Link to="/products/2">Product 2</Link>
+          </li>
         </ul>
       </section>
     </BrowserRouter>
   );
 };
 
-export { Navbar };
+export default Navbar;
