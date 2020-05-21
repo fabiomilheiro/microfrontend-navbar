@@ -2,16 +2,15 @@ import "./set-public-path";
 import React from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
-import Root from "./root.component";
+import { Navbar } from "./root.component";
 
 const lifecycles = singleSpaReact({
   React,
   ReactDOM,
-  rootComponent: Root,
-  domElementGetter: () => document.getElementById("navbar"),
+  rootComponent: Navbar,
   errorBoundary(err, info, props) {
     // Customize the root error boundary for your microfrontend here.
-    return null;
+    return <div>Could not render the navbar.</div>;
   },
 });
 

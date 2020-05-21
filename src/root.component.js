@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, BrowserRouter } from "react-router-dom";
 
-export default function Root(props) {
+const Navbar = (props) => {
   return (
     <BrowserRouter>
       <section>
@@ -17,4 +17,6 @@ export default function Root(props) {
       </section>
     </BrowserRouter>
   );
-}
+};
+
+export { Navbar };
